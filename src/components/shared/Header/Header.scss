@@ -1,0 +1,19 @@
+@import '../../../assets/styles/variables/colors';
+
+.main-nav {
+    display: flex;
+    background-color: $color__red;
+    padding: 10px 30px;
+    margin-bottom: 50px;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px -2px rgba(51, 51, 51, 0.4);
+
+    .logo {
+        color: #fefefe;
+        font-weight: 700;
+        text-decoration: none;
+        padding: 3px 15px;
+        font-size: 1rem;
+        letter-spacing: 1px;
+    }
+}

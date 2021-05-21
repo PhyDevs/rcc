@@ -1,0 +1,42 @@
+.pagination-list {
+    display: flex;
+    width: 100%;
+    margin: 15px 0 30px;
+    padding: 0;
+    flex-direction: row;
+    justify-content: center;
+    list-style: none;
+
+    li {
+        margin: 0 5px;
+
+        .page-number {
+            border: 2px solid #636363;
+            display: inline-block;
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 20px;
+            padding: 0px 6px;
+            border-radius: 50%;
+        }
+
+        button {
+            background-color: transparent;
+            border: 0;
+            font-weight: 600;
+            font-size: 14px;
+            padding: 5px 10px;
+            cursor: pointer;
+
+            &[disabled] {
+                cursor: default;
+            }
+
+            span {
+                position: relative;
+                top: -1px;
+                margin-left: 3px;
+            }
+        }
+    }
+}

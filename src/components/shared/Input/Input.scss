@@ -1,0 +1,17 @@
+@import '../../../assets/styles/variables/colors';
+
+.input-container {
+    padding: 15px 10px;
+    margin-bottom: 15px;
+
+    input {
+        min-width: 225px;
+        padding: 8px 10px;
+        border: 1px solid #c1c1c1;
+        border-radius: 3px;
+
+        &:focus {
+            outline: $color__red auto 1px
+        }
+    }
+}
