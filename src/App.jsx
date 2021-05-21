@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.scss';
+import React from 'react';
+import { Router } from "@reach/router"
+import Loading from './components/shared/Loading/Loading';
+
+import './App.scss'
+
+const Home = React.lazy(() => import('./containers/Home/Home'));
+const ViewPokemon = React.lazy(() => import('./containers/ViewPokemon/ViewPokemon'));
+const Types = React.lazy(() => import('./containers/Types/Types'));
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Suspense fallback={<Loading />}>
+      <Router>
+          <Home path="/" />
+          <ViewPokemon path="pokemon/:name" />
+          <Types path="type/:name" />
+      </Router>
+    </React.Suspense>
   );
 }
 
