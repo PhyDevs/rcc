@@ -1,6 +1,6 @@
 import React from 'react'
 import { useRequest } from '../../core/hooks/useRequest';
-import Accordion from '../shared/Accordeon/Accordion'
+import Accordion from '../shared/Accordion/Accordion'
 import Loading from '../shared/Loading/Loading';
 
 
